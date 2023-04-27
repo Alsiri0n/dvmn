@@ -11,8 +11,7 @@ def print_weather(places: list) -> None:
             response.raise_for_status()
         except requests.exceptions.HTTPError as e:
             print("Connection Error.")
-        finally:
-            print(response.text)
+        print(response.text)
 
 
 if __name__ == "__main__":
